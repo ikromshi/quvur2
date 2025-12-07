@@ -23,7 +23,7 @@ import { dialogAtom } from "src/state/dialog";
 import { useBreakpoint } from "src/hooks/use-breakpoint";
 import { LanguageSelector } from "./language-selector";
 
-import { 
+import {
   GlobeIcon,
   HelpIcon,
   KeyboardIcon,
