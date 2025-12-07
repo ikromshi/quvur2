@@ -46,7 +46,7 @@ import { NotificationFromUrl } from "./notification-from-url";
 import { setUserContext } from "src/infra/error-tracking";
 import { useAppReady } from "src/hooks/use-app-ready";
 import { AppLoader } from "./app-loader";
-import { PrivacyBanner } from "./privacy-banner";
+// import { PrivacyBanner } from "./privacy-banner";
 import { usePrivacySettings } from "src/hooks/use-privacy-settings";
 import { useFeatureFlag } from "src/hooks/use-feature-flags";
 
@@ -196,7 +196,7 @@ export function EpanetApp() {
       <TabCloseGuard />
       <OfflineGuard />
       <NotificationFromUrl />
-      <PrivacyBanner />
+      {/* <PrivacyBanner /> */}
     </main>
   );
 }

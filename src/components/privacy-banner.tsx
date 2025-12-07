@@ -1,28 +1,28 @@
-import { useAuth } from "src/auth";
-import { usePrivacySettings } from "src/hooks/use-privacy-settings";
+// import { useAuth } from "src/auth";
+// import { usePrivacySettings } from "src/hooks/use-privacy-settings";
 
-export const PrivacyBanner = () => {
-  const { isLoaded } = useAuth();
-  const { privacySettings } = usePrivacySettings();
+// export const PrivacyBanner = () => {
+//   const { isLoaded } = useAuth();
+//   const { privacySettings } = usePrivacySettings();
 
-  if (!isLoaded || privacySettings !== undefined) {
-    return null;
-  }
+//   if (!isLoaded || privacySettings !== undefined) {
+//     return null;
+//   }
 
-  return (
-    <div className="fixed bottom-10 left-0 w-full z-50 pointer-events-none">
-      <div className="max-w-4xl mx-auto px-4 pointer-events-auto">
-        <div
-          className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg p-6"
-          data-privacy-banner
-          onPointerDownCapture={(e) => {
-            e.stopPropagation();
-          }}
-        ></div>
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="fixed bottom-10 left-0 w-full z-50 pointer-events-none">
+//       <div className="max-w-4xl mx-auto px-4 pointer-events-auto">
+//         <div
+//           className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md shadow-lg p-6"
+//           data-privacy-banner
+//           onPointerDownCapture={(e) => {
+//             e.stopPropagation();
+//           }}
+//         ></div>
+//       </div>
+//     </div>
+//   );
+// };
 
 // const PreferencesView = ({
 //   privacySettings,
