@@ -45,7 +45,7 @@ export function GateAuth({ children }: GateAuthProps) {
   };
 
   if (isAuthenticated) {
-    return { children };
+    return children;
   }
 
   return (
