@@ -18,17 +18,20 @@ import { ErrorBoundary } from "@sentry/nextjs";
 import { FallbackError } from "src/components/fallback-error";
 import { FeatureFlagsProvider } from "src/hooks/use-feature-flags";
 import { LocaleProvider } from "src/hooks/use-locale";
+import { GateAuth } from "src/components/gate-auth";
 
 const queryClient = new QueryClient();
 export default function HomePage({}) {
   return (
-    <ErrorBoundary fallback={FallbackError}>
-      <QueryClientProvider client={queryClient}>
-        <T.Provider>
-          <Play />
-        </T.Provider>
-      </QueryClientProvider>
-    </ErrorBoundary>
+    <GateAuth>
+      <ErrorBoundary fallback={FallbackError}>
+        <QueryClientProvider client={queryClient}>
+          <T.Provider>
+            <Play />
+          </T.Provider>
+        </QueryClientProvider>
+      </ErrorBoundary>
+    </GateAuth>
   );
 }
 const EpanetApp = dynamic(
