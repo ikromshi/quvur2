@@ -45,7 +45,7 @@ export function GateAuth({ children }: GateAuthProps) {
   };
 
   if (isAuthenticated) {
-    return <>{children}</>;
+    return { children };
   }
 
   return (
@@ -54,7 +54,14 @@ export function GateAuth({ children }: GateAuthProps) {
         <div className="gate-header">
           <div className="gate-logo">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-              <circle cx="24" cy="24" r="22" stroke="currentColor" strokeWidth="2" fill="none" />
+              <circle
+                cx="24"
+                cy="24"
+                r="22"
+                stroke="currentColor"
+                strokeWidth="2"
+                fill="none"
+              />
               <path
                 d="M16 28C16 28 18 32 24 32C30 32 32 28 32 28"
                 stroke="currentColor"
@@ -106,7 +113,9 @@ export function GateAuth({ children }: GateAuthProps) {
         <div className="gate-footer">
           <p>
             Questions? Email us at{" "}
-            <a href="mailto:numanovikrom454@gmail.com">numanovikrom454@gmail.com</a>
+            <a href="mailto:numanovikrom454@gmail.com">
+              numanovikrom454@gmail.com
+            </a>
           </p>
         </div>
       </div>
@@ -117,9 +126,18 @@ export function GateAuth({ children }: GateAuthProps) {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+          background: linear-gradient(
+            135deg,
+            #0f172a 0%,
+            #1e293b 50%,
+            #0f172a 100%
+          );
           padding: 20px;
-          font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+          font-family:
+            "Inter",
+            -apple-system,
+            BlinkMacSystemFont,
+            sans-serif;
         }
 
         .gate-card {
@@ -263,4 +281,3 @@ export function GateAuth({ children }: GateAuthProps) {
     </div>
   );
 }
-

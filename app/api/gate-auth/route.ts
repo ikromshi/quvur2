@@ -17,6 +17,8 @@ export async function POST(request: NextRequest) {
     return response;
   }
 
-  return NextResponse.json({ success: false, error: "Invalid credentials" }, { status: 401 });
+  return NextResponse.json(
+    { success: false, error: "Invalid credentials" },
+    { status: 401 },
+  );
 }
-
