@@ -7,9 +7,9 @@ export const FallbackError = () => {
   const userTracking = useUserTracking();
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 text-white p-6">
-      <div className="bg-white text-gray-900 rounded-lg p-4 shadow-lg w-full max-w-lg">
-        <span className="flex items-center gap-x-2 text-xl text-black mb-4">
+    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white p-6">
+      <div className="bg-gray-800 text-gray-100 rounded-lg p-4 shadow-lg w-full max-w-lg">
+        <span className="flex items-center gap-x-2 text-xl text-white mb-4">
           <ErrorIcon />
           Oops! Something went wrong
         </span>
@@ -17,7 +17,7 @@ export const FallbackError = () => {
         <p className="text-sm mb-4">
           An error occurred while processing your request. Please try again or
           contact us at{" "}
-          <a href={`mailto:${supportEmail}`} className="text-purple-800">
+          <a href={`mailto:${supportEmail}`} className="text-purple-300">
             {supportEmail}
           </a>
           .

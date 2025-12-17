@@ -132,7 +132,7 @@ export function DialogHeader({
       className="flex items-center
         gap-x-2
         pb-4 text-base sm:text-lg
-        text-black dark:text-white"
+        text-white"
     >
       {children && children}
       {TitleIcon && (
@@ -142,7 +142,7 @@ export function DialogHeader({
       )}
       {title && (
         <div className="flex items-center gap-3 flex-auto min-w-0">
-          <h1 className="text-xl font-semibold text-gray-900 break-words sm:truncate">
+          <h1 className="text-xl font-semibold text-white break-words sm:truncate">
             {title}
           </h1>
           {badge && badge}
@@ -160,8 +160,8 @@ export const DialogCloseX = () => {
     <Dialog.Close
       aria-label="Close"
       className="text-gray-500 shrink-0
-                  focus:bg-gray-200 dark:focus:bg-black
-                  hover:text-black dark:hover:text-white"
+                  focus:bg-black
+                  hover:text-white"
     >
       <CloseIcon />
     </Dialog.Close>

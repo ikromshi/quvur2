@@ -179,9 +179,9 @@ export const SearchableSelector = <T extends SearchableSelectorOption>({
               onKeyDown={handleKeyDown}
               placeholder={placeholder}
               className="
-                flex items-center gap-x-2 text-gray-700 w-full min-w-[90px]
-                border rounded-sm border-gray-200 px-2 py-2 text-sm
-                bg-white dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600
+                flex items-center gap-x-2 text-gray-100 w-full min-w-[90px]
+                border rounded-sm border-gray-600 px-2 py-2 text-sm
+                bg-gray-800
                 outline-none focus:outline-none focus-visible:outline-none
                 focus:ring-inset focus:ring-1 focus:ring-purple-500 focus:bg-purple-300/10 focus:border-transparent"
             />

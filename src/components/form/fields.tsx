@@ -139,9 +139,7 @@ export const SectionList = ({
   if (header) {
     return (
       <div className="flex flex-col flex-grow overflow-hidden">
-        <div className="sticky top-0 z-10 bg-white dark:bg-gray-950">
-          {header}
-        </div>
+        <div className="sticky top-0 z-10 bg-gray-950">{header}</div>
         {content}
       </div>
     );

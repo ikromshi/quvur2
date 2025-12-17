@@ -48,7 +48,7 @@ const Header = ({ label, type }: { label: string; type: string }) => {
         </span>
         <PanelActions />
       </div>
-      <span className="text-sm text-gray-500">{type}</span>
+      <span className="text-sm text-gray-400">{type}</span>
     </div>
   );
 };
@@ -62,7 +62,7 @@ export const TextField = ({
 }) => (
   <span
     className={clsx(
-      "block w-full text-sm text-gray-700 border border-transparent tabular-nums",
+      "block w-full text-sm text-gray-200 border border-transparent tabular-nums",
       {
         "p-1": padding === "sm",
         "p-2": padding === "md",

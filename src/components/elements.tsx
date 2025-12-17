@@ -87,7 +87,7 @@ export function Badge({
           "": variant === "quiet",
         },
         `inline-flex uppercase
-    text-gray-700 dark:text-gray-100
+    text-gray-100
     font-bold text-xs px-1.5 py-0.5 rounded`,
       )}
     >
@@ -278,7 +278,7 @@ export const LogoIconAndWordmarkIcon: React.FC<{ size: number }> = ({
 };
 
 export const CapsLabel = classed.label(
-  "block uppercase font-semibold text-gray-500 dark:text-gray-500 text-xs",
+  "block uppercase font-semibold text-gray-400 text-xs",
 );
 
 const overlayClasses =
@@ -306,9 +306,9 @@ export const styledDialogContent = ({
       overflow-y-auto
       p-6 sm:p-8
       text-left
-      bg-white dark:bg-gray-900
-      dark:text-white
-      shadow-md dark:shadow-none dark:border dark:border-black
+      bg-gray-900
+      text-white
+      shadow-none border border-black
     `,
     fillMode === "full" || size === "xl" || size === "fullscreen"
       ? "flex flex-col"
@@ -343,9 +343,9 @@ const customWelcomeDialogContent = () => {
       w-full
       text-left
       align-bottom
-      bg-white dark:bg-gray-900
-      dark:text-white
-      shadow-md dark:shadow-none dark:border dark:border-black
+      bg-gray-900
+      text-white
+      shadow-none border border-black
       sm:rounded sm:align-middle w-full
       left-2/4 top-2/4 -translate-x-1/2 -translate-y-1/2
       overflow-y-auto placemark-scrollbar
@@ -372,7 +372,7 @@ export const styledCheckbox = ({
     sharedOutline("primary"),
     {
       "text-purple-500 focus:ring-purple-500": variant === "primary",
-      "text-gray-500 border-gray-500 hover:border-gray-700 dark:hover:border-gray-300 focus:ring-gray-500":
+      "text-gray-500 border-gray-500 hover:border-gray-300 focus:ring-gray-500":
         variant === "default",
     },
     `bg-transparent rounded dark:ring-offset-gray-700`,
@@ -401,9 +401,9 @@ export const TContent = classed(Tooltip.Content)(
   text-sm
   border
   shadow-sm
-  text-gray-700          dark:text-white
-  bg-white               dark:bg-gray-900
-  border-gray-200        dark:border-gray-600
+  text-white
+  bg-gray-900
+  border-gray-600
   `,
   ],
 );
@@ -418,9 +418,7 @@ export function styledPropertyInput(
       "pl-2": side === "right",
       "px-2": side === "table",
     },
-    missing
-      ? "text-gray-700 dark:text-gray-100 opacity-70"
-      : "text-gray-700 dark:text-gray-100",
+    missing ? "text-gray-100 opacity-70" : "text-gray-100",
     `bg-transparent block tabular-nums text-xs border-none pr-1 py-2
     overflow-hidden text-wrap
     focus-visible:ring-inset w-full
@@ -439,9 +437,7 @@ export function styledPropertyInputWithError(
       "pl-2": side === "right",
       "px-2": side === "table",
     },
-    missing
-      ? "text-gray-700 dark:text-gray-100 opacity-70"
-      : "text-gray-700 dark:text-gray-100",
+    missing ? "text-gray-100 opacity-70" : "text-gray-100",
     `bg-transparent block tabular-nums text-xs border-none pr-1 py-2
     w-full
     focus-visible:ring-inset
@@ -450,7 +446,7 @@ export function styledPropertyInputWithError(
   );
 }
 
-export const styledTd = "border-gray-200 dark:border-gray-600";
+export const styledTd = "border-gray-600";
 
 const arrowLike = "text-white dark:text-gray-900 fill-current";
 
@@ -462,7 +458,7 @@ const ArrowSVG = (
       fill="none"
       stroke="currentColor"
       strokeWidth="1.5"
-      className="text-gray-200 dark:text-gray-600"
+      className="text-gray-600"
     />
   </svg>
 );
@@ -510,9 +506,9 @@ export const StyledPopoverContent = classed(Popover.Content)(
       `shadow-lg
       placemark-appear
       z-20
-      bg-white dark:bg-gray-900
-      dark:text-white
-      border border-gray-200 dark:border-gray-700 rounded-md`,
+      bg-gray-900
+      text-white
+      border border-gray-700 rounded-md`,
     ),
 );
 
@@ -531,7 +527,7 @@ export function PopoverContent2({
 }
 
 export const styledTextarea =
-  "block w-full mt-1 text-sm font-mono border-gray-300 dark:bg-transparent dark:text-white rounded-sm focus-visible:border-gray-300 overflow-auto focus:ring-purple-500";
+  "block w-full mt-1 text-sm font-mono border-gray-600 bg-transparent text-white rounded-sm focus-visible:border-gray-300 overflow-auto focus:ring-purple-500";
 
 export const StyledFieldTextareaCode = classed(Field)(styledTextarea);
 
@@ -542,7 +538,7 @@ export const StyledLabelSpan = classed.span(
         "text-sm": size === "sm",
         "text-xs": size === "xs",
       },
-      "text-gray-700 dark:text-gray-300 select-none",
+      "text-gray-300 select-none",
     ),
 );
 
@@ -559,14 +555,14 @@ export const StyledFieldTextareaProse = classed(Field)(
     clsx(
       sharedEqualPadding(size),
       sharedOutline(variant),
-      "block w-full mt-1 focus-visible:border-gray-300 dark:bg-transparent dark:text-white",
+      "block w-full mt-1 focus-visible:border-gray-300 bg-transparent text-white",
     ),
 );
 
 export const contentLike = `py-1
-    bg-white dark:bg-gray-900
+    bg-gray-900
     rounded-sm
-    shadow-[0_2px_10px_2px_rgba(0,0,0,0.1)]
+    shadow-[0_2px_10px_2px_rgba(0,0,0,0.3)]
     ring-1 ring-gray-200 dark:ring-gray-700
     content-layout z-30`;
 
@@ -575,14 +571,13 @@ export const DDSubContent = classed(DD.SubContent)(contentLike);
 export const CMContent = classed(CM.Content)(contentLike);
 export const CMSubContent = classed(CM.SubContent)(contentLike);
 
-const styledLabel =
-  "block py-1 pl-3 pr-4 text-xs text-gray-500 dark:text-gray-300";
+const styledLabel = "block py-1 pl-3 pr-4 text-xs text-gray-300";
 
 export const DivLabel = classed.div(styledLabel);
 export const DDLabel = classed(DD.Label)(styledLabel);
 export const StyledSelectLabel = classed(Select.Label)(styledLabel);
 
-const styledSeparator = "border-t border-gray-100 dark:border-gray-700 my-1";
+const styledSeparator = "border-t border-gray-700 my-1";
 
 export const DivSeparator = classed.div(styledSeparator);
 export const DDSeparator = classed(DD.Separator)(styledSeparator);
@@ -603,8 +598,8 @@ export const menuItemLike = ({
         variant === "destructive" || variant === "danger-quiet",
     },
     `cursor-pointer
-    hover:bg-gray-200 dark:hover:bg-gray-700
-    focus-visible:bg-gray-100 dark:focus-visible:bg-gray-700
+    hover:bg-gray-700
+    focus-visible:bg-gray-700
     flex items-center
     w-full
     py-1 pl-3 pr-3
@@ -657,9 +652,9 @@ export const CMItem = classed(CM.Item)(menuItemLike);
 export const StyledPopoverCross = () => (
   <Popover.Close
     className="flex
-  focus-visible:text-black dark:focus-visible:text-white
-  text-gray-500 dark:text-gray-300
-  hover:text-black dark:hover:text-white"
+  focus-visible:text-white
+  text-gray-300
+  hover:text-white"
   >
     <CloseIcon />
   </Popover.Close>
@@ -747,13 +742,13 @@ export function sharedOutline(
       [`border border-purple-500`]: variant === "primary",
       [`border border-blue-500`]: variant === "blue",
       [`border
-    border-gray-200               dark:border-gray-500
+    border-gray-500
     shadow-sm
   `]: variant === "default",
 
       [`
-    focus-visible:border-gray-200   dark:focus-visible:border-gray-300
-    hover:border-gray-300   dark:hover:border-gray-300
+    focus-visible:border-gray-300
+    hover:border-gray-300
     `]: variant === "default" && !disabled,
 
       [`border
@@ -786,15 +781,15 @@ const sharedBackground = (variant: B3Variant, disabled = false): ClassValue => {
         !disabled && `hover:bg-blue-700 dark:hover:bg-blue-500 hover:shadow`,
       ];
     case "default":
-      return !disabled && `hover:bg-gray-100 dark:hover:bg-gray-800`;
+      return !disabled && `hover:bg-gray-800`;
     case "quiet":
-      return !disabled && `hover:bg-gray-200 dark:hover:bg-gray-700`;
+      return !disabled && `hover:bg-gray-700`;
     case "ultra-quiet":
-      return !disabled && `hover:bg-gray-200 dark:hover:bg-gray-700`;
+      return !disabled && `hover:bg-gray-700`;
     case "quiet/mode":
-      return !disabled && `hover:bg-gray-200 dark:hover:bg-gray-700`;
+      return !disabled && `hover:bg-gray-700`;
     case "quiet/list":
-      return !disabled && `hover:bg-gray-200 dark:hover:bg-gray-700`;
+      return !disabled && `hover:bg-gray-700`;
     case "destructive":
     case "danger-quiet":
       return !disabled && `hover:bg-red-600/10 dark:hover:bg-red-400/20`;
@@ -819,7 +814,7 @@ const sharedText = (variant: B3Variant): ClassValue => {
     case "quiet/list":
     case "danger-quiet":
     case "default": {
-      return "font-medium text-gray-700 dark:text-white";
+      return "font-medium text-white";
     }
     case "ultra-quiet":
       return "text-gray-500 hover:text-gray-700";
@@ -873,8 +868,8 @@ export const styledButton = ({
             ? `aria-expanded:bg-blue-700
     data-state-on:bg-blue-700`
             : `
-    aria-expanded:bg-gray-200 dark:aria-expanded:bg-black
-    data-state-on:bg-gray-200 dark:data-state-on:bg-gray-600`,
+    aria-expanded:bg-black
+    data-state-on:bg-gray-600`,
     "disabled:opacity-50 disabled:cursor-not-allowed",
     "transition-colors",
     // Focus
@@ -905,10 +900,10 @@ export const styledPanelTitle = ({
   clsx(
     `text-sm
   w-full
-  text-gray-700 dark:text-gray-300
+  text-gray-300
   flex justify-between items-center`,
     "px-3 py-3",
-    interactive && `hover:text-gray-900 dark:hover:text-white`,
+    interactive && `hover:text-white`,
   );
 
 export const Button = classed.button(styledButton);
@@ -964,7 +959,7 @@ export const Keycap = classed.div(({ size = "sm" }: { size?: B3Size }) => [
   font-mono rounded
   ring-1 ring-gray-100 dark:ring-black
   border border-b-4 border-r-2
-  border-gray-300 dark:border-gray-500`,
+  border-gray-500`,
 ]);
 
 export const Input = classed.input(inputClass);
@@ -985,32 +980,30 @@ export const TextWell = classed.div(
       "py-1 px-2":
         (variant === "destructive" || variant === "primary") && size === "xs",
       "text-xs": size === "xs",
-      "text-gray-700 dark:text-gray-300": variant === "default",
-      "text-red-700 dark:text-red-100 bg-red-50 dark:bg-red-900 rounded":
-        variant === "destructive",
-      "bg-gray-50 border border-gray-200 dark:bg-gray-900 dark:border-gray-700 rounded":
-        variant === "primary",
+      "text-gray-300": variant === "default",
+      "text-red-100 bg-red-900 rounded": variant === "destructive",
+      "bg-gray-900 border border-gray-700 rounded": variant === "primary",
     }),
 );
 
 export const StyledSwitch = classed(S.Root)(
   `w-10 h-5 rounded-full
-  bg-gray-200 dark:bg-black
-  data-state-checked:bg-purple-300 dark:data-state-checked:bg-purple-400
+  bg-black
+  data-state-checked:bg-purple-400
   dark:ring-1 dark:ring-gray-300
   transition-all`,
 );
 export const StyledThumb = classed(S.Thumb)(
   `w-5 h-5 border-2
-  border-gray-200 dark:border-black
-  data-state-checked:border-purple-300 dark:data-state-checked:border-purple-400
+  border-black
+  data-state-checked:border-purple-400
   rounded-full bg-white block shadow-sm data-state-checked:translate-x-5`,
 );
 
 export const StyledPopoverTrigger = classed(Popover.Trigger)(
   clsx(
-    `aria-expanded:bg-gray-200 dark:aria-expanded:bg-gray-900
-    data-state-on:bg-gray-200 dark:data-state-on:bg-gray-600`,
+    `aria-expanded:bg-gray-900
+    data-state-on:bg-gray-600`,
     "disabled:opacity-50 disabled:cursor-not-allowed",
     // Focus
     `focus-visible:outline-none`,
@@ -1049,7 +1042,7 @@ export function Table({ children }: React.PropsWithChildren<unknown>) {
 
 export function TableHead({ children }: React.PropsWithChildren<unknown>) {
   return (
-    <thead className="bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-gray-200">
+    <thead className="bg-gray-700 text-gray-200">
       <tr>{children}</tr>
     </thead>
   );
@@ -1069,9 +1062,7 @@ export const Td = classed.td(({ first = false }: { first?: boolean }) => {
   );
 });
 
-export const Tbody = classed.tbody(
-  "divide-y divide-gray-200 dark:divide-gray-500 bg-white dark:bg-gray-800",
-);
+export const Tbody = classed.tbody("divide-y divide-gray-600 bg-gray-800");
 
 export const VisibilityToggleIcon = ({
   visibility,

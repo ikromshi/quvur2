@@ -17,10 +17,10 @@ import { symbologyAtom } from "src/state/symbology";
 import { PropsWithChildren } from "react";
 
 export const tipLike = `
-    bg-white dark:bg-gray-900
+    bg-gray-900
     rounded-sm
-    shadow-[0_2px_10px_2px_rgba(0,0,0,0.1)]
-    ring-1 ring-gray-200 dark:ring-gray-700
+    shadow-[0_2px_10px_2px_rgba(0,0,0,0.3)]
+    ring-1 ring-gray-700
     content-layout z-10`;
 
 function HintWrapper({
@@ -38,7 +38,7 @@ function HintWrapper({
   return (
     <div
       className={clsx(
-        "absolute max-w-[600px] top-2 left-3 text-sm flex gap-x-2  dark:text-white rounded-md",
+        "absolute max-w-[600px] top-2 left-3 text-sm flex gap-x-2 text-white rounded-md",
         "p-2 items-start",
         tipLike,
       )}

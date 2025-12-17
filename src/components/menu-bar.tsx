@@ -1,12 +1,7 @@
 import React, { memo, useRef, useState } from "react";
 import { FileInfo } from "src/components/file-info";
 import * as DD from "@radix-ui/react-dropdown-menu";
-import {
-  Button,
-  DDContent,
-  StyledItem,
-  LogoIconAndWordmarkIcon,
-} from "./elements";
+import { Button, DDContent, StyledItem } from "./elements";
 import { DebugDropdown } from "./menu-bar/menu-bar-dropdown";
 import { isDebugOn } from "src/infra/debug-mode";
 import { useTranslate } from "src/hooks/use-translate";
@@ -40,8 +35,8 @@ export function MenuBarFallback() {
 export const HeaderLogo = () => {
   return (
     <span className="pl-1" title="Home">
-      <LogoIconAndWordmarkIcon size={98} />
-      <span className="sr-only">QUVUR</span>
+      {/* <LogoIconAndWordmarkIcon size={98} /> */}
+      <span className="italic">QUVUR</span>
     </span>
   );
 };
@@ -56,7 +51,7 @@ export const MenuBarPlay = memo(function MenuBar() {
   const isSmOrLarger = useBreakpoint("sm");
 
   return (
-    <div className="flex justify-between h-12 pr-2 text-black dark:text-white">
+    <div className="flex justify-between h-12 pr-2 text-white">
       <div className="flex items-center">
         <div
           className="py-1 pl-2 pr-2 inline-flex cursor-pointer"

@@ -49,7 +49,7 @@ const Legend = ({ symbology }: { symbology: RangeColorRule }) => {
       <div
         className={clsx(
           "block w-full p-2 flex flex-col justify-between items-start gap-2",
-          "cursor-pointer hover:bg-gray-100",
+          "cursor-pointer hover:bg-gray-800",
         )}
         onClick={() => {
           setExpanded(!isExpanded);
@@ -80,7 +80,7 @@ const LegendContainer = ({
 }) => {
   return (
     <div
-      className="space-y-1 text-xs bg-white dark:bg-gray-900 dark:text-white border border-gray-300 dark:border-black w-32 rounded-sm"
+      className="space-y-1 text-xs bg-gray-900 text-white border border-black w-32 rounded-sm"
       onClick={onClick}
     >
       {children}

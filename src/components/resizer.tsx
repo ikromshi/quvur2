@@ -202,9 +202,7 @@ export const Resizer = memo(function ResizerInner({
         bg-opacity-0
         dark:bg-opacity-0
         hover-none:bg-opacity-40
-        hover-none:dark:bg-opacity-40
-        hover-none:bg-white
-        hover-none:dark:bg-black
+        hover-none:bg-black
         hover-hover:hover:bg-opacity-100
         hover-hover:dark:hover:bg-opacity-100
         bg-purple-700
@@ -217,7 +215,7 @@ export const Resizer = memo(function ResizerInner({
         h-16
         w-1
         rounded
-        bg-white"
+        bg-gray-700"
         />
       </button>
       {showPanel ? null : isToggleAllowed && <PanelToggle side={side} />}
@@ -256,8 +254,7 @@ function PanelToggle({
             : "border-r rounded-l-none",
           `
           absolute px-0.5 py-2 top-1/2 border-t border-b
-          bg-white hover:bg-purple-100 border-gray-300
-          dark:bg-gray-900 dark:text-white dark:hover:bg-purple-700 dark:border-white
+          bg-gray-900 text-white hover:bg-purple-700 border-white
           rounded
         `,
         )}
@@ -297,9 +294,7 @@ export const BottomResizer = memo(function BottomResizerInner() {
         bg-opacity-0
         dark:bg-opacity-0
         hover-none:bg-opacity-40
-        hover-none:dark:bg-opacity-40
-        hover-none:bg-white
-        hover-none:dark:bg-black
+        hover-none:bg-black
         hover-hover:hover:bg-opacity-100
         hover-hover:dark:hover:bg-opacity-100
         bg-purple-700
@@ -312,7 +307,7 @@ export const BottomResizer = memo(function BottomResizerInner() {
         h-16
         w-1
         rounded
-        bg-white"
+        bg-gray-700"
       />
     </button>
   );

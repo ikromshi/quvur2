@@ -33,14 +33,14 @@ function Tab({
       className={clsx(
         "text-left text-sm py-1 px-3 focus:outline-none",
         active
-          ? "text-black dark:text-white"
+          ? "text-white"
           : `
-          bg-gray-100 dark:bg-gray-900
+          bg-gray-900
           border-b
-          border-gray-200 dark:border-black
-          text-gray-500 dark:text-gray-400
-          hover:text-black dark:hover:text-gray-200
-          focus:text-black`,
+          border-black
+          text-gray-400
+          hover:text-gray-200
+          focus:text-white`,
       )}
       {...attributes}
     >
@@ -78,8 +78,8 @@ const TabList = memo(function TabList({
       }}
       className="flex-0 grid h-8 flex-none
       sticky top-0 z-10
-      bg-white dark:bg-gray-800
-      divide-x divide-gray-200 dark:divide-black"
+      bg-gray-800
+      divide-x divide-black"
     >
       <Tab
         onClick={() => setTab(TabOption.Asset)}
@@ -103,7 +103,7 @@ export const SidePanel = memo(function SidePanelInner() {
       style={{
         width: splits.right,
       }}
-      className="bg-white dark:bg-gray-800 border-l border-gray-200 dark:border-gray-900 relative"
+      className="bg-gray-800 border-l border-gray-700 relative"
     >
       <Panel />
     </div>
@@ -119,7 +119,7 @@ export const BottomPanel = memo(function BottomPanelInner() {
       style={{
         height: splits.bottom,
       }}
-      className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-900 relative"
+      className="bg-gray-800 border-t border-gray-700 relative"
     >
       <Panel />
     </div>
@@ -128,7 +128,7 @@ export const BottomPanel = memo(function BottomPanelInner() {
 
 export const FullPanel = memo(function FullPanelInner() {
   return (
-    <div className="flex flex-auto bg-white dark:bg-gray-800 relative">
+    <div className="flex flex-auto bg-gray-800 relative">
       <Panel />
     </div>
   );
@@ -158,7 +158,7 @@ export const LeftSidePanel = memo(function LeftSidePanelInner() {
       style={{
         width: splits.left,
       }}
-      className="bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-900 relative"
+      className="bg-gray-800 border-r border-gray-700 relative"
     >
       <NetworkReview />
     </div>

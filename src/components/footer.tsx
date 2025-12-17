@@ -24,8 +24,8 @@ export const Footer = () => {
   const isSmOrLarger = useBreakpoint("sm");
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-gray-50 border-t border-gray-300 shadow-lg">
-      <div className="flex flex-row items-center text-sm text-gray-500 space-x-1">
+    <nav className="fixed bottom-0 left-0 w-full bg-gray-800 border-t border-gray-700 shadow-lg">
+      <div className="flex flex-row items-center text-sm text-gray-400 space-x-1">
         {!isXlOrLarger && (
           <div className="px-2">
             <CollapsedPopover
@@ -35,17 +35,17 @@ export const Footer = () => {
             />
           </div>
         )}
-        <div className="border-r-2 border-gray-100 h-10"></div>
+        <div className="border-r-2 border-gray-700 h-10"></div>
         {isXlOrLarger && (
           <>
             <span className="px-4 py-2">
               {translate("autoLengths")}: {translate("on")}
             </span>
-            <div className="border-r-2 border-gray-150 h-10"></div>
+            <div className="border-r-2 border-gray-700 h-10"></div>
             <span className="px-4 py-2">
               {translate("autoElevations")}: {translate("on")}
             </span>
-            <div className="border-r-2 border-gray-150 h-10"></div>
+            <div className="border-r-2 border-gray-700 h-10"></div>
           </>
         )}
         {isLgOrLarger && (
@@ -53,11 +53,11 @@ export const Footer = () => {
             <span className="px-4 py-2">
               {translate("units")}: {modelMetadata.quantities.specName}
             </span>
-            <div className="border-r-2 border-gray-150 h-10"></div>
+            <div className="border-r-2 border-gray-700 h-10"></div>
             <span className="px-4 py-2">
               {translate("headlossShort")}: {hydraulicModel.headlossFormula}
             </span>
-            <div className="border-r-2 border-gray-150 h-10"></div>
+            <div className="border-r-2 border-gray-700 h-10"></div>
           </>
         )}
         {isSmOrLarger && (
@@ -66,7 +66,7 @@ export const Footer = () => {
               {translate("demandMultiplier")}:{" "}
               {localizeDecimal(hydraulicModel.demands.multiplier)}
             </span>
-            <div className="border-r-2 border-gray-150 h-10"></div>
+            <div className="border-r-2 border-gray-700 h-10"></div>
           </>
         )}
         <span className="px-1">
@@ -98,26 +98,26 @@ const CollapsedPopover = ({
       </Popover.Trigger>
       <Popover.Portal>
         <StyledPopoverContent size="auto">
-          <div className="grid grid-cols-[max-content_1fr] gap-x-3 gap-y-4 text-sm text-gray-500 p-2">
+          <div className="grid grid-cols-[max-content_1fr] gap-x-3 gap-y-4 text-sm text-gray-400 p-2">
             <span>{translate("autoLengths")}</span>
-            <span className="text-gray-700">{translate("on")}</span>
+            <span className="text-gray-200">{translate("on")}</span>
 
             <span>{translate("autoElevations")}</span>
-            <span className="text-gray-700">{translate("on")}</span>
+            <span className="text-gray-200">{translate("on")}</span>
 
             {!isLgOrLarger && (
               <>
                 <span>{translate("units")}</span>
-                <span className="text-gray-700">{unitsSpecName}</span>
+                <span className="text-gray-200">{unitsSpecName}</span>
                 <span>{translate("headlossShort")}</span>
-                <span className="text-gray-700">{headlossFormula}</span>
+                <span className="text-gray-200">{headlossFormula}</span>
               </>
             )}
 
             {!isSmOrLarger && (
               <>
                 <span>{translate("demandMultiplier")}</span>
-                <span className="text-gray-700">
+                <span className="text-gray-200">
                   {localizeDecimal(demandMultiplier)}
                 </span>
               </>

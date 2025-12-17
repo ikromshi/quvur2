@@ -33,7 +33,7 @@ export const SatelliteToggle = () => {
     <div
       className={clsx(
         "absolute bottom-[2rem] left-3 w-16 h-16 sm:w-16 sm:h-16",
-        "bg-white rounded border-white border-2 shadow-md cursor-pointer",
+        "bg-gray-800 rounded border-gray-700 border-2 shadow-md cursor-pointer",
         buttonThumbnailClass,
       )}
       onClick={() => {

@@ -76,7 +76,7 @@ export const Toolbar = () => {
   return (
     <div
       className="relative flex flex-row items-center justify-between overflow-x-auto sm:overflow-visible
-          border-t border-gray-200 dark:border-gray-900 px-2 h-12"
+          border-t border-gray-700 px-2 h-12"
     >
       <div className="flex flex-row items-center justify-start">
         <CreateNewDropdown />

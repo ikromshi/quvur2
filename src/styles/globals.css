@@ -34,6 +34,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply bg-gray-900 text-white;
 }
 
 details > summary {
@@ -169,15 +170,15 @@ details summary::-webkit-details-marker {
 }
 
 :root {
-  --highlight-purple: theme("colors.purple.500");
-  --highlight-dark-purple: theme("colors.purple.700");
-  --highlight-yellow: theme("colors.yellow.500");
-  --highlight-dark-yellow: theme("colors.yellow.500");
+  --highlight-purple: theme("colors.purple.300");
+  --highlight-dark-purple: theme("colors.purple.100");
+  --highlight-yellow: theme("colors.yellow.100");
+  --highlight-dark-yellow: theme("colors.yellow.300");
   --highlight-gray: theme("colors.gray.300");
   --highlight-dark-gray: theme("colors.gray.500");
-  --highlight-light-gray: theme("colors.purple.100");
-  --highlight-tooltip-text: theme("colors.black");
-  --highlight-background: theme("colors.white");
+  --highlight-light-gray: theme("colors.gray.700");
+  --highlight-background: theme("colors.gray.800");
+  --highlight-tooltip-text: theme("colors.white");
   --cm-font: theme("fontFamily.mono");
 }
 
@@ -208,11 +209,11 @@ details summary::-webkit-details-marker {
  */
 
 .properties-tab {
-  @apply py-0.5 px-1 text-xs cursor-pointer text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-sm;
+  @apply py-0.5 px-1 text-xs cursor-pointer text-gray-300 hover:bg-gray-700 rounded-sm;
 }
 
 .properties-tab[data-state="active"] {
-  @apply bg-gray-200 hover:bg-gray-200 dark:text-black;
+  @apply bg-gray-700 hover:bg-gray-700 text-white;
 }
 
 [aria-expanded="true"] .aria-expanded\:block {
@@ -270,26 +271,26 @@ body.dark .mapboxgl-ctrl-attrib-button {
 }
 
 .placemark-scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-gray-400 dark:bg-gray-100;
-  @apply hover:bg-gray-500 hover:dark:bg-white;
+  @apply bg-gray-600;
+  @apply hover:bg-gray-500;
 }
 
 .placemark-scrollbar::-webkit-scrollbar {
   @apply h-3 w-3;
-  @apply bg-gray-100 dark:bg-gray-500;
+  @apply bg-gray-800;
 }
 
 /* CSS-only scroll shadows using background-attachment: local */
 .scroll-shadows {
   background:
-    /* Top shadow cover - moves with content to hide shadow at top */
-    linear-gradient(to bottom, white 30%, transparent) center top,
-    /* Bottom shadow cover - moves with content to hide shadow at bottom */
-    linear-gradient(to top, white 30%, transparent) center bottom,
-    /* Top shadow - stays fixed */
-    radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.12), transparent) center top,
-    /* Bottom shadow - stays fixed */
-    radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.12), transparent) center bottom;
+    /* Top shadow cover - dark mode uses gray-950 (#020617) */
+    linear-gradient(to bottom, #020617 30%, transparent) center top,
+    /* Bottom shadow cover */
+    linear-gradient(to top, #020617 30%, transparent) center bottom,
+    /* Top shadow - slightly lighter for dark mode */
+    radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.3), transparent) center top,
+    /* Bottom shadow */
+    radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.3), transparent) center bottom;
   background-repeat: no-repeat;
   background-size: 100% 40px, 100% 40px, 100% 10px, 100% 10px;
   background-attachment: local, local, scroll, scroll;
@@ -297,10 +298,10 @@ body.dark .mapboxgl-ctrl-attrib-button {
 
 .dark .scroll-shadows {
   background:
-    /* Top shadow cover - dark mode uses gray-950 (#030712) */
-    linear-gradient(to bottom, #030712 30%, transparent) center top,
+    /* Top shadow cover - dark mode uses gray-950 (#020617) */
+    linear-gradient(to bottom, #020617 30%, transparent) center top,
     /* Bottom shadow cover */
-    linear-gradient(to top, #030712 30%, transparent) center bottom,
+    linear-gradient(to top, #020617 30%, transparent) center bottom,
     /* Top shadow - slightly lighter for dark mode */
     radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.3), transparent) center top,
     /* Bottom shadow */
@@ -326,8 +327,8 @@ body.dark .mapboxgl-ctrl-attrib-button {
     overflow-auto
     p-2
     border
-    border-gray-300 dark:border-gray-500 rounded
-    dark:bg-gray-800 dark:text-white;
+    border-gray-600 rounded
+    bg-gray-800 text-white;
 
   > * + * {
     margin-top: 0.75em;
@@ -369,7 +370,7 @@ body.dark .mapboxgl-ctrl-attrib-button {
 
   a {
     text-decoration: underline;
-    @apply text-purple-700 dark:text-purple-300;
+    @apply text-purple-300;
   }
 
   pre {
