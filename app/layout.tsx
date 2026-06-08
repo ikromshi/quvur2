@@ -28,12 +28,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "QUVUR",
   description:
-    "Run EPANET in your browser with QUVUR — no download needed. Works on Mac, Linux, or Windows. Save files locally. Modern, enhanced, and built on the trusted EPANET engine.",
+    "QUVUR is a browser-based workspace for hydraulic modeling, water quality analysis, and operational planning for water infrastructure teams.",
   openGraph: {
-    title:
-      "QUVUR: EPANET in your browser — start water modeling now, no download required.",
+    title: "QUVUR: Water network modeling in your browser.",
     description:
-      "Run EPANET in your browser with QUVUR — no download needed. Works on Mac, Linux, or Windows. Save files locally. Modern, enhanced, and built on the trusted EPANET engine.",
+      "QUVUR is a browser-based workspace for hydraulic modeling, water quality analysis, and operational planning for water infrastructure teams.",
     url: "https://quvur.uz",
     siteName: "QUVUR",
     images: {
